@@ -1,0 +1,167 @@
+/* src/JobApplicationForm.css */
+.form-container {
+    background-color: #d7e0f6;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/background.png);
+    background-repeat: no-repeat;
+    background-size: 630px 680px; 
+    background-position: 48vw;
+    
+  }
+  
+  .responsive-form {
+    background: rgba(255, 255, 255, 0.2); /* Add a semi-transparent background to the form */
+    padding: 20px;
+    margin-left: 230px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    width: 450px;
+    max-width: 500px;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: transform 0.3s ease;
+    position: relative;
+    
+  }
+  
+  .responsive-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 96%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .form-group input:hover{
+    background-color: #d6e7f9;
+  }
+  .form-group input[type="checkbox"]{
+    position: absolute;
+    left:100px;
+  }
+  
+  button {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2828a7;
+    margin-left: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #4076ff;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .popup.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .popup-inner {
+    background: #ffffff76;
+    padding: 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .popup.show .popup-inner {
+    transform: translateY(0);
+  }
+  
+  .popup-inner h2 {
+    margin-bottom: 20px;
+  }
+  
+  .popup-inner p {
+    margin-bottom: 10px;
+  }
+  
+  .popup-inner button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #003e81;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .popup-inner button:hover {
+    background-color: #0056b3;
+  }
+  
